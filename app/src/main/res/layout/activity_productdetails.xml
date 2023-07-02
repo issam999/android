@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:onClick="increment"
+    tools:context=".Activity.ProductdetailsActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="81dp"
+        android:layout_height="727dp"
+        android:background="#F5F5F5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Your Place is "
+            android:textColor="#373131"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_search" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="50dp"
+            android:layout_height="161dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="148dp"
+            android:fontFamily="@font/rubik_bold_italic"
+            android:gravity="center"
+            android:text="Add To Cart"
+            android:textColor="#005B1B"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="21dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginBottom="220dp"
+            android:background="?attr/actionModeCloseDrawable"
+            app:layout_constraintBottom_toTopOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:onClick="to_home_page"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_back_img3"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_more" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="274dp"
+        android:layout_height="306dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/detail_page_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="59dp"
+            app:layout_constraintBottom_toTopOf="@+id/prd_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/prd_name"
+            android:layout_width="88dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/rubik_bold"
+            android:gravity="center"
+            android:text="Japanese Cherry Blossom"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/prd_description"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/prd_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="56dp"
+            android:fontFamily="@font/rubik_bold"
+            android:text=" 15.00"
+            android:textColor="#42995C"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/prd_name" />
+
+        <TextView
+            android:id="@+id/prd_description"
+            android:layout_width="227dp"
+            android:layout_height="116dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/rubik"
+            android:lineSpacingExtra="2dp"
+            android:text="A moisturizing body with a sweet and refreshing aroma of Japanese cherry blossom, peony, musk, and strawberry. Will make the skin feel moist and smooth.."
+            android:textColor="@android:color/background_dark"
+            app:layout_constraintBottom_toTopOf="@+id/add_cart"
+            app:layout_constraintEnd_toEndOf="@+id/prd_price"
+            app:layout_constraintStart_toStartOf="@+id/prd_name" />
+
+        <ImageView
+            android:id="@+id/img_decrement"
+            android:layout_width="36dp"
+            android:layout_height="46dp"
+            android:minWidth="48dp"
+            android:onClick="decrement"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/prd_description"
+            app:layout_constraintTop_toTopOf="@+id/add_cart"
+            app:srcCompat="@drawable/ic_minus"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/prd_qty"
+            android:layout_width="41dp"
+            android:layout_height="53dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@android:color/background_dark"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_decrement"
+            app:layout_constraintStart_toEndOf="@+id/img_decrement"
+            app:layout_constraintTop_toTopOf="@+id/img_decrement"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/img_increment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="increment"
+            app:layout_constraintBottom_toBottomOf="@+id/prd_qty"
+            app:layout_constraintEnd_toStartOf="@+id/add_cart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/prd_qty"
+            app:layout_constraintTop_toTopOf="@+id/prd_qty"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_plus"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/add_cart"
+            android:layout_width="132dp"
+            android:layout_height="74dp"
+            android:background="@drawable/detail_page_cart_button_bg"
+            android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+            android:fontFamily="@font/rubik_medium"
+            android:padding="16dp"
+            android:paddingRight="16dp"
+            android:text="Add to Cart"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="DT"
+            app:layout_constraintBottom_toTopOf="@+id/prd_description"
+            app:layout_constraintStart_toEndOf="@+id/prd_price" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/prd_image"
+        android:layout_width="231dp"
+        android:layout_height="310dp"
+        android:layout_marginBottom="12dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:srcCompat="@drawable/image1" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="145dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_bold_italic"
+        android:gravity="center"
+        android:text="Get Your Product !"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
